@@ -7,8 +7,8 @@ public class Dog extends Animal implements java.io.Serializable {
 	}
 
 	public Dog(String shelter_id, String animal_name, String animal_id, double weight,
-			Long receipt_date) {
-		super(shelter_id, "dog", animal_name, animal_id, weight, receipt_date);
+			Long receipt_date, Long leave_date) {
+		super(shelter_id, "dog", animal_name, animal_id, weight, receipt_date, leave_date);
 	}
 
 }

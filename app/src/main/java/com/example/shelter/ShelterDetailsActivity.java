@@ -45,7 +45,7 @@ public class ShelterDetailsActivity extends AppCompatActivity {
         }
         //, "Unit", "Date Added"
         headerData = new String[]{
-                "ID", "Name", "Type", "Weight"
+                "ID", "Name", "Type", "Weight", "Unit", "Date added", "Date leave"
         };
 
         gridView = findViewById(R.id.simpleGridView);
@@ -82,7 +82,7 @@ public class ShelterDetailsActivity extends AppCompatActivity {
         int num = 0;
 
         for (Animal animal : shelter.getAnimals()) {
-            num += 4;
+            num += 7;
         }
         int index = 0;
         String[] entries = new String[num];
@@ -92,8 +92,9 @@ public class ShelterDetailsActivity extends AppCompatActivity {
             entries[index++] = "" + animal.getAnimal_name();
             entries[index++] = "" + animal.getAnimal_type();
             entries[index++] = "" + animal.getWeight();
-            //entries[index++] = "" + animal.getUnit();
-            //entries[index++] = "" + new Date(animal.getReceipt_date()).toString();
+            entries[index++] = "" + animal.getUnit();
+            entries[index++] = "" + new Date(animal.getReceipt_date()).toString();
+            entries[index++] = "" + new Date(animal.getLeave_date()).toString();
         }
         return entries;
     }
