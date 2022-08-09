@@ -30,6 +30,8 @@ public class AddAnimalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_animal);
+        //noinspection RestrictedApi
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
         shelterID = intent.getStringExtra("shelterID");

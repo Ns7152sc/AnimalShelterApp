@@ -12,6 +12,7 @@
         android:theme="@style/Theme.Shelter">
         <activity
             android:name=".AddAnimalActivity"
+            android:parentActivityName=".ShelterDetailsActivity"
             android:exported="false" />
         <activity
             android:name=".ShelterDetailsActivity"
