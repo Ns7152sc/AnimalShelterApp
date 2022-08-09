@@ -97,6 +97,7 @@ public class AddAnimalActivity extends AppCompatActivity {
             animal.setWeight(animalWeightDouble);
             animal.setUnit(animalUnit);
             animal.setReceipt_date(new Date().getTime());
+            animal.setLeave_date(new Date().getTime());
             Shelter shelter = ((ShelterTrackerApplication) getApplication()).findShelterById(shelterID);
             if(shelter != null){
                 shelter.addIncomingAnimal(animal);

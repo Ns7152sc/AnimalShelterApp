@@ -14,7 +14,7 @@ public class ShelterTrackerApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        for(int i = 0; i < 20; i++) {
+        for(int i = 0; i < 3; i++) {
             shelterList.add(new Shelter(Integer.toString(i), "Shelter Number " + i));
         }
     }

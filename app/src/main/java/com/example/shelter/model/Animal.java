@@ -9,11 +9,12 @@ public class Animal implements java.io.Serializable {
 	private double weight;
 	private String unit;
 	private Long receipt_date;
+	private Long leave_date;
 	
 	public Animal() {}
 
 	public Animal(String shelter_id, String animal_type, String animal_name, String animal_id, double weight,
-			Long receipt_date) {
+			Long receipt_date, Long leave_date) {
 		this.shelter_id = shelter_id;
 		this.animal_type = animal_type;
 		this.animal_name = animal_name;
@@ -73,6 +74,12 @@ public class Animal implements java.io.Serializable {
 
 	public void setReceipt_date(Long receipt_date) {
 		this.receipt_date = receipt_date;
+	}
+
+	public Long getLeave_date(){ return leave_date;}
+
+	public void setLeave_date(Long leave_date) {
+		this.leave_date = leave_date;
 	}
 
 	@Override
