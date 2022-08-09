@@ -15,6 +15,7 @@
             android:exported="false" />
         <activity
             android:name=".ShelterDetailsActivity"
+            android:parentActivityName="MainActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

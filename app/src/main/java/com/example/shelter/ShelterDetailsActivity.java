@@ -35,6 +35,8 @@ public class ShelterDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shelter_details);
+        //noinspection RestrictedApi
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
         Intent intent = getIntent();
         shelterID = intent.getStringExtra("shelterID");
@@ -45,7 +47,7 @@ public class ShelterDetailsActivity extends AppCompatActivity {
         }
         //, "Unit", "Date Added"
         headerData = new String[]{
-                "ID", "Name", "Type", "Weight", "Unit", "Date added", "Date leave"
+                "ID", "Name", "Type", "Weight", "Unit", "Date added", "Date departure"
         };
 
         gridView = findViewById(R.id.simpleGridView);
